@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Elementos";
+    var sensores = new List<string> { "Sensor 1", "Sensor 2", /* ... */ };
+}
+
+<h2>Elementos de Sensores</h2>
+
+<div class="row">
+    @foreach (var sensor in sensores)
+    {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">@sensor</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+</div>

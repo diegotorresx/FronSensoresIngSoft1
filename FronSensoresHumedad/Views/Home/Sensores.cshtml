@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Sensores";
+    var sensores = new List<string> { "Sensor 1", "Sensor 2", /* ... */ };
+}
+
+<h2>Sensores</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seleccionar Sensor
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach (var sensor in sensores)
+                {
+                    <a class="dropdown-item" href="#">@sensor</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group">
+            <!-- Mostrar listado de datos -->
+            <li class="list-group-item">Dato 1</li>
+            <li class="list-group-item">Dato 2</li>
+            <!-- ... -->
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+    </div>
+</div>
